@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class forgeJump {
     public static int path(int a,int b){
 //        int[][] m = new int[b-a+1][b-a+1];
@@ -13,9 +15,11 @@ public class forgeJump {
 //        }
 //
 //        return m[0][b-a] + 1;
+
         int[] path = new int[b-a+1];
         path[0] = 1;
         path[1] = 1;
+
         for (int i = 2;i<path.length;i++){
             path[i] = path[i-1] + path[i-2];
         }
@@ -25,7 +29,13 @@ public class forgeJump {
 
     public static void main(String[] args){
 //        System.out.println(path(1,3)+"");
-        System.out.println(path(1,10));
+        Scanner scanner = new Scanner(System.in);
+        while(scanner != null){
+            int a = scanner.nextInt();
+            int b = scanner.nextInt();
+            System.out.println(path(a,b));
+        }
+//        System.out.println(path(1,10));
 
     }
 }

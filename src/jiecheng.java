@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 public class jiecheng {
+
     static int[] m = new int[10000];
+
     public static void jie(int n){
         for (int i = 2;i<m.length;i++){
             m[i] = 0;

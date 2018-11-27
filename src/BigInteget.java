@@ -109,6 +109,6 @@ class BigInteger
     public static void main(String[] args)
     {
         BigInteger bi = new BigInteger();
-        bi.doBigFactorial(1000000);
+        bi.doBigFactorial(500000);
     }
 }

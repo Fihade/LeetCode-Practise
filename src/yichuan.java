@@ -37,21 +37,25 @@ public class yichuan {
     }
 
     public static int change1(String m){
+
         char[] mm = m.toCharArray();
+
         int mid = mm.length / 2;
         int countX = 0;
         int countY = 0;
-        int count = 0;
+
         for (int i = 0;i<mid;i++){
             if (mm[i] == 'X') countX++;
         }
         for (int j = mm.length - 1;j>mid;j--){
             if (mm[j] == 'Y') countY++;
         }
+
+        int count = 0;
         if (countX >= mid/2) {
             count += (mid - countX);
         }else count += countX;
-        if (countY > mm.length - mid){
+        if (countY > (mm.length - mid)/2){
             count += (mm.length - mid - countY);
         }else count += countY;
 
@@ -59,6 +63,9 @@ public class yichuan {
     }
     public static void main(String[] args){
 //        System.out.println(Math.min(swap("XYXXYY"),change("XYXXYY")));
-        System.out.println(change1("XYXYXXYX"));
+//        XYYYYY	XYXYXYXY	XXXYYY
+        System.out.println(change1("YXXXXX"));
+        System.out.println(change1("XYXYXYXY"));
+        System.out.println(0);
     }
 }
